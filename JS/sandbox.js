@@ -1,11 +1,15 @@
-// else if statements
+// variables & block scope
+const age = 30
 
-const password = 'p@ss';
+if(true){
+    const age = 40;
+    const name = 'shaun';
+    console.log('inside 1st code block: ', age, name);
 
-if(password.length >= 8){
-    console.log('that password is long enough!');
-} else {
-    console.log('password is not long enough')
-} else {
-    console.log('password is not long enough')
+    if(true){
+        const age = 50;
+        console.log('inside 2nd code block: ', age);
+    }
 }
+
+console.log('outside code block: ', age, Name, test);
