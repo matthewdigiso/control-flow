@@ -1,15 +1,27 @@
-// variables & block scope
-const age = 30
 
-if(true){
-    const age = 40;
-    const name = 'shaun';
-    console.log('inside 1st code block: ', age, name);
+const d = new Date();
 
-    if(true){
-        const age = 50;
-        console.log('inside 2nd code block: ', age);
-    }
+let hour = d.getHours();
+
+
+
+let greetingText = document.getElementById("greeting-text");
+
+
+  greetingText.textContent = "Good Morning!";
+  document.querySelector(".night").classList.add("d-none");
+  document.querySelector(".afternoon").classList.add("d-none");
+} else if (hour < 17) {
+  
+  greetingText.textContent = "Good Afternoon!";
+  document.getElementsByTagName("body")[0].classList.add("noon-bg");
+  greetingText.parentElement.classList.add("noon-gradient");
+  document.querySelector(".morning").classList.add("d-none");
+  document.querySelector(".night").classList.add("d-none");
+
+else {
+  greetingText.textContent = "Good Night!";
+  greetingText.parentElement.classList.add("night-gradient");
+  document.querySelector(".morning").classList.add("d-none");
+  document.querySelector(".afternoon").classList.add("d-none");
 }
-
-console.log('outside code block: ', age, Name, test);
